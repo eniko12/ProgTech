@@ -25,6 +25,7 @@ Egy kezdetleges Gamify Your Life alkalmazást szeretnék készíteni, lényegéb
 ## Tervezési minták
 - **MVC** tervezési mintának megfelelően épülne fel
 - előzményekhez loggger használata, itt használnám a **Singleton**-t.
-- a 3 feladat típust **stratégiaként** írnám fel és a feladatok létrehozásakor pedig **gyártófüggvényt** használnék.
+- a 3 feladat típust **stratégiaként** írnám fel
+- Hogy mindig a legfrisebb feladatok jelenjenek meg a profilon **Observer**-t használnék
 
 > Written with [StackEdit](https://stackedit.io/).
