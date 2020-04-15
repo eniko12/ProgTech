@@ -6,15 +6,15 @@ Egy kezdetleges Gamify Your Life alkalmazást szeretnék készíteni, lényegéb
 ## Megvalósítandó funkciók
   
 - **A karakternek volna egy profilja:**
- -- névvel
- --  szinttel
- --  feladatokkal
- --  az elvégzett feladatok alapján számítva az erősségeivel
+  - névvel
+  -  szinttel
+  -  feladatokkal
+  -  az elvégzett feladatok alapján számítva az erősségeivel
 
 - **Három típusú feladat jelenne meg:** 
--- munkához kapcsolódó
--- hobbihoz kapcsolódó 
--- egyéb 
+   - munkához kapcsolódó
+   - hobbihoz kapcsolódó 
+   - egyéb 
 
 - meg lehetne tekinteni a karakter profilját
 -  listázni a feladatokat
