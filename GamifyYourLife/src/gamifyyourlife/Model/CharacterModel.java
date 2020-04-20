@@ -22,7 +22,15 @@ public class CharacterModel {
    public void addTask(){
         
     }
-    
+   
+   public String GetName(){
+       return name;
+   }
+   
+   public void SetName(String name){
+       this.name = name;
+    }
+       
     
     
 }

@@ -8,6 +8,8 @@ package gamifyyourlife;
 import gamifyyourlife.Controller.CharacterController;
 import gamifyyourlife.Model.CharacterModel;
 import gamifyyourlife.View.CharacterView;
+import gamifyyourlife.View.MainPageView;
+import gamifyyourlife.View.PanelParentView;
 
 /**
  *
@@ -19,12 +21,14 @@ public class GamifyYourLife {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       CharacterView theCharacterView = new CharacterView();
-       CharacterModel theCharacterModel = new CharacterModel();
+       CharacterModel chModel = new CharacterModel();
+       CharacterView chPanel = new CharacterView();
        
-       CharacterController theCharacterController = new CharacterController(theCharacterView,theCharacterModel);
+       CharacterController chController = new CharacterController(chPanel, chModel);
        
-       theCharacterView.setVisible(true);
+       MainPageView page = new MainPageView(chPanel);
+       
+       page.setVisible(true);
     }
     
 }

@@ -7,18 +7,46 @@ package gamifyyourlife.Controller;
 
 import gamifyyourlife.Model.CharacterModel;
 import gamifyyourlife.View.CharacterView;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  *
  * @author Felhasználó
  */
-public class CharacterController {
+public class CharacterController {  
+    private CharacterView chView;
+    private CharacterModel chModel;
     
-    private CharacterView theCharacterView;
-    private CharacterModel theCharacterModel;
+    public CharacterController(CharacterView chView, CharacterModel chModel){
+        this.chView = chView;
+        this.chModel = chModel;
+        
+        this.chView.addSendButtonListener(new SendButtonListener());
+        this.chView.addNextButtonListener(new NextButtonListener());
+    }
     
-    public CharacterController(CharacterView theCharacterView, CharacterModel theCharacterModel){
-        this.theCharacterView = theCharacterView;
-        this.theCharacterModel = theCharacterModel;
+    class SendButtonListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            String name = "Jani";
+            
+            name = chView.getName();
+            chModel.SetName(name);
+            chView.setName(chModel.GetName());
+            
+            chView.setHello("Szia " + chModel.GetName());
+        }                          
+    }
+    
+    class NextButtonListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            chView.setVisible(false);
+        }
     }
 }
+      
+

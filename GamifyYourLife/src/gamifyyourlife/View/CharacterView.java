@@ -8,30 +8,43 @@ package gamifyyourlife.View;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-/**
- *
- * @author Felhasználó
- */
-public class CharacterView extends JFrame {
-    
+public class CharacterView extends PanelParentView{
     private JLabel nameLabel = new JLabel("A karaktered neve: ");
     private JTextField name = new JTextField(10);
+    private JButton send = new JButton("Kész");
+    private JTextField hello = new JTextField(15);
+    private JButton next = new JButton("Tovább");
     
-    public CharacterView(){
-        
-        JPanel profile = new JPanel();
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(600,300);
-        
-        profile.add(nameLabel);
-        profile.add(name);
-        
-        this.add(profile);
+    public CharacterView(){       
+        this.add(nameLabel);
+        this.add(name);
+        this.add(send);     
+        this.add(hello);
+        this.add(next);
     }
-    
+         
     public String getName(){
         return name.getText();
     }
-   
     
+    public String getHello(){
+        return hello.getText();
+    }
+    
+    public void setHello(String hello){
+        this.hello.setText(hello);
+    }
+    
+  
+    
+    public void addSendButtonListener(ActionListener listenerForSendBtn){
+        send.addActionListener(listenerForSendBtn);
+    }
+    
+     public void addNextButtonListener(ActionListener listenerForNextBtn){
+        next.addActionListener(listenerForNextBtn);
+    }
+    
+    
+       
 }
