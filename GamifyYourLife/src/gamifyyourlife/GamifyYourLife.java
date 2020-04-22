@@ -25,12 +25,13 @@ public class GamifyYourLife {
        CharacterModel chModel = new CharacterModel("Regina");
        CharacterView chPanel = new CharacterView();
        ProfileView profileV = new ProfileView();
+       MainPageView mP = new MainPageView();
        
        CharacterController chController = new CharacterController(chPanel, chModel);
        
-       MainPageView page = new MainPageView(profileV);
+      
        
-       page.setVisible(true);
+      mP.setVisible(true);
     }
     
 }
