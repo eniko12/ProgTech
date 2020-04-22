@@ -10,6 +10,7 @@ import gamifyyourlife.Model.CharacterModel;
 import gamifyyourlife.View.CharacterView;
 import gamifyyourlife.View.MainPageView;
 import gamifyyourlife.View.PanelParentView;
+import gamifyyourlife.View.ProfileView;
 
 /**
  *
@@ -21,12 +22,13 @@ public class GamifyYourLife {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       CharacterModel chModel = new CharacterModel();
+       CharacterModel chModel = new CharacterModel("Regina");
        CharacterView chPanel = new CharacterView();
+       ProfileView profileV = new ProfileView();
        
        CharacterController chController = new CharacterController(chPanel, chModel);
        
-       MainPageView page = new MainPageView(chPanel);
+       MainPageView page = new MainPageView(profileV);
        
        page.setVisible(true);
     }

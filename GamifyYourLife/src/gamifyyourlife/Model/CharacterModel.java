@@ -19,15 +19,24 @@ public class CharacterModel {
     
     private List <TaskModel> MyTasks;
     
+    public CharacterModel(String name){
+        this.setName(name);
+        this.hobbiLevel = 0;
+        this.jobLevel = 0;
+        this.otherLevel = 0;
+        
+        
+    }
+    
    public void addTask(){
         
     }
    
-   public String GetName(){
+   public String getName(){
        return name;
    }
    
-   public void SetName(String name){
+   public void setName(String name){
        this.name = name;
     }
        

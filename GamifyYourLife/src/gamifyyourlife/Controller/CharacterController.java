@@ -33,10 +33,10 @@ public class CharacterController {
             String name = "Jani";
             
             name = chView.getName();
-            chModel.SetName(name);
-            chView.setName(chModel.GetName());
+            chModel.setName(name);
+            chView.setName(chModel.getName());
             
-            chView.setHello("Szia " + chModel.GetName());
+            chView.setHello("Szia " + chModel.getName());
         }                          
     }
     
