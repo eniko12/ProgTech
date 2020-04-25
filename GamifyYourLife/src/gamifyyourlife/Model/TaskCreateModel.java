@@ -13,7 +13,7 @@ public class TaskCreateModel {
     private TaskModel task;
     
     public void TaskType( TaskModel t){
-        this.task = t;
+        this.task = t;  
     }
     public void taskDone(ProfileModel p){
         this.task.addPoints(p);
