@@ -15,7 +15,7 @@ public class MainPageView extends JFrame {
     private JButton torlesFeladat = new JButton("Feladat Törlés");
     private JButton modositFeladat = new JButton("Feladat módosítás");
     private JButton elozmenyek = new JButton("Előzmények");    
-    public ProfileView profileV = new ProfileView();
+    private ProfileView profileV = new ProfileView();
     private JPanel everything = new JPanel();
     
           
@@ -34,6 +34,7 @@ public class MainPageView extends JFrame {
         
         this.everything.add(profileV);               
         this.profileV.setVisible(true);
+        
         
         
         

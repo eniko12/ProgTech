@@ -14,8 +14,5 @@ import javax.swing.JPanel;
  * @author Felhasználó
  */
 public class PanelParentView extends JPanel {
-     public PanelParentView(){
-        
-        this.setSize(600,300);
-    }
+     
 }

@@ -20,8 +20,6 @@ public class ProfileView extends PanelParentView {
     private JTextField job = new JTextField(5);
      private JLabel otherLabel = new JLabel("Egyéb szint:");
     private JTextField other = new JTextField(5);
-    private JButton list = new JButton("Mai feladatok listázása");
-    private JTextField taskList = new JTextField(10);
     
     public ProfileView(){    
         JPanel character = new JPanel();
@@ -34,9 +32,7 @@ public class ProfileView extends PanelParentView {
         levels.add(job);
         levels.add(otherLabel);
         levels.add(other);
-        JPanel tasks = new JPanel();
-        tasks.add(list);
-        tasks.add(taskList);
+        JPanel tasks = new JPanel();;
         this.add(character);
         this.add(levels);
         this.add(tasks);

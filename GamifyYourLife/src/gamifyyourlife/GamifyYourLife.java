@@ -5,8 +5,10 @@
  */
 package gamifyyourlife;
 
-import gamifyyourlife.Controller.CharacterController;
-import gamifyyourlife.Model.CharacterModel;
+import gamifyyourlife.Model.ProfileModel;
+import gamifyyourlife.Model.TaskHobbyModel;
+import gamifyyourlife.Model.TaskJobModel;
+import gamifyyourlife.Model.TaskOtherModel;
 import gamifyyourlife.View.CharacterView;
 import gamifyyourlife.View.MainPageView;
 import gamifyyourlife.View.PanelParentView;
@@ -22,16 +24,49 @@ public class GamifyYourLife {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       CharacterModel chModel = new CharacterModel("Regina");
-       CharacterView chPanel = new CharacterView();
-       ProfileView profileV = new ProfileView();
-       MainPageView mP = new MainPageView();
-       
-       CharacterController chController = new CharacterController(chPanel, chModel);
-       
+        ProfileModel p = new ProfileModel("Regina");
+        System.out.println("Szia " + p.getName());
+        System.out.println("Hobbi szint: "+ p.getHobbyLevel());
+        System.out.println("Munka szint: "+ p.getJobLevel());
+        System.out.println("Egyéb szint: "+ p.getOtherLevel());
+        System.out.println("Arany egyenleg: "+ p.getGold());
+        
+        System.out.println();
+        TaskJobModel jobT = new TaskJobModel("Email-ek kiküldése", 10, 10);
+        System.out.println(jobT.toString());
+        jobT.addPoints(p);
+        
+        System.out.println();
+        System.out.println("A feladat elvégzése után:");
+        System.out.println("Hobbi szint: "+ p.getHobbyLevel());
+        System.out.println("Munka szint: "+ p.getJobLevel());
+        System.out.println("Egyéb szint: "+ p.getOtherLevel());
+        System.out.println("Arany egyenleg: "+ p.getGold());
+        
+        System.out.println();
+        TaskHobbyModel hobbyT = new TaskHobbyModel("Olvasás", 5, 10);
+        System.out.println(hobbyT.toString());
+        hobbyT.addPoints(p);
+        
+        System.out.println();
+        System.out.println("A feladat elvégzése után:");
+        System.out.println("Hobbi szint: "+ p.getHobbyLevel());
+        System.out.println("Munka szint: "+ p.getJobLevel());
+        System.out.println("Egyéb szint: "+ p.getOtherLevel());
+        System.out.println("Arany egyenleg: "+ p.getGold());
+        
+        System.out.println();
+        TaskOtherModel otherT = new TaskOtherModel("Mosogatás", 15, 10);
+        System.out.println(otherT.toString());
+        otherT.addPoints(p);
+        
+        System.out.println();
+        System.out.println("A feladat elvégzése után:");
+        System.out.println("Hobbi szint: "+ p.getHobbyLevel());
+        System.out.println("Munka szint: "+ p.getJobLevel());
+        System.out.println("Egyéb szint: "+ p.getOtherLevel());
+        System.out.println("Arany egyenleg: "+ p.getGold());
       
-       
-      mP.setVisible(true);
     }
     
 }
