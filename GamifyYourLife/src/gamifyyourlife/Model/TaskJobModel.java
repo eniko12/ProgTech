@@ -1,6 +1,4 @@
-
 package gamifyyourlife.Model;
-
 
 public class TaskJobModel extends TaskModel{
     
@@ -15,7 +13,6 @@ public class TaskJobModel extends TaskModel{
        p.setJobLevel(this.pointReward + p.getJobLevel());
        this.addGold(p);
     }
-    
     
     @Override
     public String toString(){

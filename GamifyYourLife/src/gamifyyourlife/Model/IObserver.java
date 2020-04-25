@@ -1,4 +1,3 @@
-
 package gamifyyourlife.Model;
 
 import java.util.ArrayList;

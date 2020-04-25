@@ -1,6 +1,4 @@
-
 package gamifyyourlife.Model;
-
 
 public abstract class TaskModel {
     protected String taskName;
@@ -9,9 +7,5 @@ public abstract class TaskModel {
     public void addGold(ProfileModel p){
        p.setGold(p.getGold() + goldReward);
     }
-    public abstract void addPoints(ProfileModel p);
-    
- 
-    
-    
+    public abstract void addPoints(ProfileModel p);       
 }

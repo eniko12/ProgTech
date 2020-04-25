@@ -1,8 +1,6 @@
-
 package gamifyyourlife.Model;
 
 import java.util.ArrayList;
-
 
 public class ProfileModel implements IObserver, IDisplayElement {
     
@@ -86,8 +84,6 @@ public class ProfileModel implements IObserver, IDisplayElement {
     public int getOtherLevel(){
         return this.otherLevel;
     }
-    
-    
     
     @Override
     public void update(ArrayList<TaskModel> tasks) {

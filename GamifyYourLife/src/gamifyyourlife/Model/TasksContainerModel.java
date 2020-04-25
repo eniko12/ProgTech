@@ -1,5 +1,5 @@
-
 package gamifyyourlife.Model;
+
 import java.util.ArrayList;
 
 public class TasksContainerModel implements ISubject {

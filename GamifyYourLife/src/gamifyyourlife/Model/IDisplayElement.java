@@ -1,4 +1,3 @@
-
 package gamifyyourlife.Model;
 
 public interface IDisplayElement {
