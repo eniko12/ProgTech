@@ -11,26 +11,22 @@ import gamifyyourlife.Model.TaskCreateModel;
 import gamifyyourlife.Model.TaskHobbyModel;
 import gamifyyourlife.Model.TaskJobModel;
 import gamifyyourlife.Model.TaskOtherModel;
+import gamifyyourlife.Model.TasksContainerModel;
 import gamifyyourlife.View.CharacterView;
 import gamifyyourlife.View.MainPageView;
 import gamifyyourlife.View.PanelParentView;
 import gamifyyourlife.View.ProfileView;
 
-/**
- *
- * @author Felhasználó
- */
+
 public class GamifyYourLife {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        HistoryModel history1 = HistoryModel.getInstance();
-        HistoryModel history2 = HistoryModel.getInstance();
+        TasksContainerModel everyTask = new TasksContainerModel();
         
-        ProfileModel p = new ProfileModel("Regina");
-        history1.addToHistory("Új profil létrehozva " + p.getName() + " névvel.");
+        ProfileModel p = new ProfileModel("Regina", everyTask);
         System.out.println("Szia " + p.getName());
         System.out.println("Hobbi szint: "+ p.getHobbyLevel());
         System.out.println("Munka szint: "+ p.getJobLevel());
@@ -39,18 +35,20 @@ public class GamifyYourLife {
         
         System.out.println();
         TaskJobModel jobT = new TaskJobModel("Email-ek kiküldése", 10, 10);
-        System.out.println(jobT.toString());
+        everyTask.addTask(jobT);
         TaskHobbyModel hobbyT = new TaskHobbyModel("Olvasás", 5, 10);
-        System.out.println(hobbyT.toString());
+        everyTask.addTask(hobbyT);
         TaskOtherModel otherT = new TaskOtherModel("Mosogatás", 15, 10);
-        System.out.println(otherT.toString());      
+        everyTask.addTask(otherT);
+        
+        
+        
+      
        
         System.out.println("---------------------------");
-        TaskCreateModel create = new TaskCreateModel(); 
+        TaskCreateModel create = new TaskCreateModel(everyTask.history); 
         create.TaskType(jobT);
-        history1.addToHistory("Új feladat hozzáadva.");
-        create.taskDone(p);
-        history1.addToHistory("Feladat teljesítve.");
+        create.taskDone(p,everyTask);
         
         System.out.println();
         System.out.println("A munka feladat elvégzése után:");
@@ -61,9 +59,7 @@ public class GamifyYourLife {
         
         System.out.println("---------------------------");
         create.TaskType(hobbyT);
-        history1.addToHistory("Új feladat hozzáadva.");
-        create.taskDone(p);
-        history1.addToHistory("Feladat teljesítve.");
+        create.taskDone(p,everyTask);
         
         System.out.println();
         System.out.println("A hobbi feladat elvégzése után:");
@@ -74,9 +70,7 @@ public class GamifyYourLife {
         
         System.out.println("---------------------------");
         create.TaskType(otherT);
-        history1.addToHistory("Új feladat hozzáadva.");
-        create.taskDone(p);        
-        history1.addToHistory("Feladat teljesítve.");
+        create.taskDone(p, everyTask);      
         
         System.out.println();
         System.out.println("Az egyéb feladat elvégzése után:");
@@ -86,29 +80,13 @@ public class GamifyYourLife {
         System.out.println("Arany egyenleg: "+ p.getGold());
         
         System.out.println("---------------------------");
-          
-        if(history1 == history2){
-            System.out.println("Ugyanaz a kettő");
-        }
-          
-        if(history1 != history2){
-            System.out.println("Nem ugyanaz.");
-        }
-          
-        for(int i = 0; i<history1.listLength(); i++)  
-        {
-            System.out.println(history1.getListElement(i));
+        TaskJobModel jobT2 = new TaskJobModel("Szerződések aláírása", 5, 10);
+        everyTask.addTask(jobT2);
+        
+        for(int i = 0; i<everyTask.history.listLength(); i++){
+            System.out.println(everyTask.history.getListElement(i));
         }
         
-        
-        System.out.println(history1.listLength());
-        
-        for(int i=0; i<history1.listLength(); i++){
-            System.out.println(history1.getListElement(i));
-        }
-        
-        
-     
     }
     
 }

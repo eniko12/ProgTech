@@ -42,7 +42,8 @@ public class ProfileModelTest {
      */
     @Test
     public void testSetName() {
-        ProfileModel p = new ProfileModel("REgINa");        
+        TasksContainerModel everyTask = new TasksContainerModel();
+        ProfileModel p = new ProfileModel("REgINa", everyTask);        
         String expResult = "Regina";
         String name = p.getName();
         assertEquals(expResult, name);
@@ -52,7 +53,8 @@ public class ProfileModelTest {
      
     @Test
     public void testGetName() {
-        ProfileModel p = new ProfileModel("Regina");        
+        TasksContainerModel everyTask = new TasksContainerModel();
+        ProfileModel p = new ProfileModel("Regina", everyTask);        
         String expResult = "Regina";
         String name = p.getName();
         assertEquals(expResult, name);
@@ -62,7 +64,8 @@ public class ProfileModelTest {
     
     @Test
     public void testSetGold() {
-        ProfileModel p = new ProfileModel("Regina");  
+        TasksContainerModel everyTask = new TasksContainerModel();
+        ProfileModel p = new ProfileModel("Regina", everyTask);   
         p.setGold(-10);
         int gold = p.getGold();
         int expResult = 0;        
@@ -70,7 +73,8 @@ public class ProfileModelTest {
     }
     
     public void testSetGold2() {
-        ProfileModel p = new ProfileModel("Regina");  
+        TasksContainerModel everyTask = new TasksContainerModel();
+        ProfileModel p = new ProfileModel("Regina", everyTask);  
         p.setGold(110);
         int gold = p.getGold();
         int expResult =110;        
@@ -78,11 +82,12 @@ public class ProfileModelTest {
     }
     
     public void testSetGold3() {
-        ProfileModel p = new ProfileModel("Regina"); 
-        TaskCreateModel create = new TaskCreateModel(); 
+        TasksContainerModel everyTask = new TasksContainerModel();
+        ProfileModel p = new ProfileModel("Regina", everyTask);  
+        TaskCreateModel create = new TaskCreateModel(everyTask.history); 
         TaskJobModel jobT = new TaskJobModel("Email-ek kiküldése", -100, 10);
         create.TaskType(jobT);
-        create.taskDone(p);  
+        create.taskDone(p, everyTask);  
         int expResult = 0;
         int gold = p.getGold();
         assertEquals(expResult, gold);   
@@ -91,7 +96,8 @@ public class ProfileModelTest {
     
     @Test
     public void testGetGold() {
-        ProfileModel p = new ProfileModel("Regina"); 
+        TasksContainerModel everyTask = new TasksContainerModel();
+        ProfileModel p = new ProfileModel("Regina", everyTask);  
         int expResult = 50;
         int gold = p.getGold();
         assertEquals(expResult, gold);
@@ -100,7 +106,8 @@ public class ProfileModelTest {
    
     @Test
     public void testSetJobLevel() {
-        ProfileModel p = new ProfileModel("Regina"); 
+        TasksContainerModel everyTask = new TasksContainerModel();
+        ProfileModel p = new ProfileModel("Regina", everyTask);   
         int expResult = 10;
         p.setJobLevel(10);
         int points = p.getJobLevel();
@@ -111,14 +118,17 @@ public class ProfileModelTest {
     
     @Test
     public void testGetJobLevel() {
-        ProfileModel p = new ProfileModel("Regina"); 
+        TasksContainerModel everyTask = new TasksContainerModel();
+        ProfileModel p = new ProfileModel("Regina", everyTask);  
         int expResult = 0;
         int points = p.getJobLevel();
+        assertEquals(expResult, points);
     }
     
      @Test
     public void testSetHobbyLevel() {
-        ProfileModel p = new ProfileModel("Regina"); 
+        TasksContainerModel everyTask = new TasksContainerModel();
+        ProfileModel p = new ProfileModel("Regina", everyTask);  
         int expResult = 10;
         p.setHobbyLevel(10);
         int points = p.getHobbyLevel();
@@ -129,14 +139,17 @@ public class ProfileModelTest {
     
     @Test
     public void testGetHobbyLevel() {
-        ProfileModel p = new ProfileModel("Regina"); 
+        TasksContainerModel everyTask = new TasksContainerModel();
+        ProfileModel p = new ProfileModel("Regina", everyTask);  
         int expResult = 0;
         int points = p.getHobbyLevel();
+        assertEquals(expResult, points);
     }
     
      @Test
     public void testOtherLevel() {
-        ProfileModel p = new ProfileModel("Regina"); 
+        TasksContainerModel everyTask = new TasksContainerModel();
+        ProfileModel p = new ProfileModel("Regina", everyTask);  
         int expResult = 10;
         p.setOtherLevel(10);
         int points = p.getOtherLevel();
@@ -147,9 +160,11 @@ public class ProfileModelTest {
     
     @Test
     public void testGetOtherLevel() {
-        ProfileModel p = new ProfileModel("Regina"); 
+        TasksContainerModel everyTask = new TasksContainerModel();
+        ProfileModel p = new ProfileModel("Regina", everyTask);  
         int expResult = 0;
         int points = p.getOtherLevel();
+        assertEquals(expResult, points);
     }
 
 }
