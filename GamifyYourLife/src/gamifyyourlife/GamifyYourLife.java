@@ -12,11 +12,7 @@ import gamifyyourlife.Model.TaskHobbyModel;
 import gamifyyourlife.Model.TaskJobModel;
 import gamifyyourlife.Model.TaskOtherModel;
 import gamifyyourlife.Model.TasksContainerModel;
-import gamifyyourlife.View.CharacterView;
 import gamifyyourlife.View.MainPageView;
-import gamifyyourlife.View.PanelParentView;
-import gamifyyourlife.View.ProfileView;
-
 
 public class GamifyYourLife {
 
@@ -86,6 +82,8 @@ public class GamifyYourLife {
         for(int i = 0; i<everyTask.history.listLength(); i++){
             System.out.println(everyTask.history.getListElement(i));
         }
+        
+        MainPageView mainP = new MainPageView();
         
     }
     
