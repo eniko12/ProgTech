@@ -5,7 +5,9 @@ import javax.swing.*;
 
 public class MainPageView extends JFrame {
     //Főoldal
+    public JPanel p1;
     JLabel greeting;
+    JButton updateAll;
     JTextField goldT;
     JTextField job;
     JTextField hobby;
@@ -31,8 +33,13 @@ public class MainPageView extends JFrame {
         JPanel container = new JPanel();
         container.setLayout(new BoxLayout(container,BoxLayout.Y_AXIS));
         JPanel greetingP = new JPanel();
-        greeting = new JLabel("Szia Regina!");       
+        greeting = new JLabel("Szia valaki!");    
+        updateAll = new JButton("Oldal frissítése");
+        greetingP.add(Box.createHorizontalStrut(80));
         greetingP.add(greeting);
+         greetingP.add(Box.createHorizontalStrut(240));
+        greetingP.add(updateAll);
+        greetingP.add(Box.createHorizontalStrut(80));
         
 
         JPanel goldP = new JPanel();
@@ -40,6 +47,7 @@ public class MainPageView extends JFrame {
         goldT = new JTextField(8);
         goldP.add(gold);
         goldP.add(goldT);
+        goldP.add(Box.createHorizontalStrut(275));
 
         JPanel LevelsP = new JPanel();
         JLabel jobLevel = new JLabel("Munka: ");
@@ -94,7 +102,7 @@ public class MainPageView extends JFrame {
         
         container.add(tasksP3);
         
-        JPanel p1=new JPanel(); 
+        p1=new JPanel(); 
         p1.add(container);
          
         JPanel historyP = new JPanel();
@@ -189,13 +197,16 @@ public class MainPageView extends JFrame {
         this.add(tp);  
         this.setSize(800,800);  
         this.setLayout(null);  
-        this.setVisible(true);  
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    }
     
     //Főoldal
     public void setGreetingLabel(String name){
-       greeting.setText(name);
+       greeting.setText("Szia " + name + "!");
+    }
+    
+    public void addUpdateAllBtnListener(ActionListener listenerForUpdateAll){
+        send.addActionListener(listenerForUpdateAll);
     }
     
     public void setGold(int gold){

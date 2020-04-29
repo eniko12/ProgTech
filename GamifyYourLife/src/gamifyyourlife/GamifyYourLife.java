@@ -5,7 +5,7 @@
  */
 package gamifyyourlife;
 
-import gamifyyourlife.Model.HistoryModel;
+import gamifyyourlife.Controller.MainPageController;
 import gamifyyourlife.Model.ProfileModel;
 import gamifyyourlife.Model.TaskCreateModel;
 import gamifyyourlife.Model.TaskHobbyModel;
@@ -21,8 +21,13 @@ public class GamifyYourLife {
      */
     public static void main(String[] args) {
         TasksContainerModel everyTask = new TasksContainerModel();
+        ProfileModel p =new ProfileModel("Regina", everyTask);   
+        MainPageView mainView = new MainPageView();
         
-        ProfileModel p = new ProfileModel("Regina", everyTask);
+        MainPageController controller = new MainPageController(mainView,p);
+        controller.mainView.setVisible(true);
+        
+        /**
         System.out.println("Szia " + p.getName());
         System.out.println("Hobbi szint: "+ p.getHobbyLevel());
         System.out.println("Munka szint: "+ p.getJobLevel());
@@ -83,7 +88,7 @@ public class GamifyYourLife {
             System.out.println(everyTask.history.getListElement(i));
         }
         
-        MainPageView mainP = new MainPageView();
+        **/
         
     }
     
