@@ -20,14 +20,14 @@ public class GamifyYourLife {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        MainPageView view = new MainPageView();
         TasksContainerModel everyTask = new TasksContainerModel();
-        ProfileModel p =new ProfileModel("Regina", everyTask);   
-        MainPageView mainView = new MainPageView();
+        ProfileModel p = new ProfileModel("Regina", everyTask);
+        MainPageController controller = new MainPageController(view,p);
         
-        MainPageController controller = new MainPageController(mainView,p);
-        controller.mainView.setVisible(true);
         
-        /**
+        
+        /*
         System.out.println("Szia " + p.getName());
         System.out.println("Hobbi szint: "+ p.getHobbyLevel());
         System.out.println("Munka szint: "+ p.getJobLevel());
@@ -87,8 +87,9 @@ public class GamifyYourLife {
         for(int i = 0; i<everyTask.history.listLength(); i++){
             System.out.println(everyTask.history.getListElement(i));
         }
+                */
         
-        **/
+       
         
     }
     

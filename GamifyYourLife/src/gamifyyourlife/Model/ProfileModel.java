@@ -9,7 +9,7 @@ public class ProfileModel implements IObserver, IDisplayElement {
     private int hobbyLevel;
     private int otherLevel;
     private int gold;
-    private ISubject TasksContainer;
+    public ISubject TasksContainer;
     private ArrayList<TaskModel> myTasks;
     
     public ProfileModel(String name, ISubject TasksContainer){
@@ -97,5 +97,13 @@ public class ProfileModel implements IObserver, IDisplayElement {
           for(int i = 0; i< myTasks.size(); i++){
             System.out.println(myTasks.get(i));
         }
+    }
+    
+    public ArrayList<String> listEveryTask(){
+        ArrayList<String> list = new ArrayList<String>();
+        for(int i = 0; i<myTasks.size(); i++){
+            list.add(myTasks.get(i).taskName);
+        }
+        return list;
     }
 }
