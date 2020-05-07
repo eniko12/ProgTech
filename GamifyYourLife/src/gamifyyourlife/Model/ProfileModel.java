@@ -87,16 +87,15 @@ public class ProfileModel implements IObserver, IDisplayElement {
     
     @Override
     public void update(ArrayList<TaskModel> tasks) {
-        this.myTasks = tasks;
-        display();        
+        this.myTasks = tasks;              
     }
 
     @Override
     public void display() {
-        System.out.println("Frissült feladatok: ");
-          for(int i = 0; i< myTasks.size(); i++){
-            System.out.println(myTasks.get(i));
-        }
+        //System.out.println("Frissült feladatok: ");
+         // for(int i = 0; i< myTasks.size(); i++){
+        //    System.out.println(myTasks.get(i));
+       // }
     }
     
     public ArrayList<String> listEveryTask(){

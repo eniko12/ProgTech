@@ -6,6 +6,7 @@
 package gamifyyourlife;
 
 import gamifyyourlife.Controller.MainPageController;
+import gamifyyourlife.Controller.ProfileController;
 import gamifyyourlife.Model.ProfileModel;
 import gamifyyourlife.Model.TaskCreateModel;
 import gamifyyourlife.Model.TaskHobbyModel;
@@ -13,6 +14,7 @@ import gamifyyourlife.Model.TaskJobModel;
 import gamifyyourlife.Model.TaskOtherModel;
 import gamifyyourlife.Model.TasksContainerModel;
 import gamifyyourlife.View.MainPageView;
+import gamifyyourlife.View.ShowProfileView;
 
 public class GamifyYourLife {
 
@@ -22,8 +24,11 @@ public class GamifyYourLife {
     public static void main(String[] args) {
         MainPageView view = new MainPageView();
         TasksContainerModel everyTask = new TasksContainerModel();
-        ProfileModel p = new ProfileModel("Regina", everyTask);
-        MainPageController controller = new MainPageController(view,p);
+        ProfileModel p = new ProfileModel("RegiNA", everyTask);
+       // MainPageController controller = new MainPageController(view,p);
+        
+        ShowProfileView showP = new ShowProfileView();
+        ProfileController profileC = new ProfileController(p,showP);
         
         
         

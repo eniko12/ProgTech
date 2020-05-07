@@ -7,6 +7,7 @@ public class TasksContainerModel implements ISubject {
     private ArrayList<IObserver> observers; 
     public HistoryModel history = HistoryModel.getInstance();
     
+    
     public TasksContainerModel(){
         
         this.observers = new ArrayList<IObserver>();
