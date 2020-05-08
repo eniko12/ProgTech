@@ -51,7 +51,7 @@ public class TasksContainerModelTest {
         c.addTask(hobbyT);
         c.addTask(otherT);
         ArrayList<TaskModel> result = c.getAll();
-        ArrayList<TaskModel> exp = new ArrayList<TaskModel>();
+        ArrayList<TaskModel> exp = new ArrayList<>();
         exp.add(hobbyT);
         exp.add(otherT);
         ArrayList<TaskModel> expResult = exp;

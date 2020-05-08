@@ -3,13 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Egyetem/4.%20félév/Programozási%20technológiák/ProgTech/GamifyYourLife/src/gamifyyourlife/View/CreateNewTaskView.java</file>
-            <file>file:/D:/Egyetem/4.%20félév/Programozási%20technológiák/ProgTech/GamifyYourLife/src/gamifyyourlife/Controller/MainPageController.java</file>
-            <file>file:/D:/Egyetem/4.%20félév/Programozási%20technológiák/ProgTech/GamifyYourLife/src/gamifyyourlife/Controller/CreateNewTaskController.java</file>
-            <file>file:/D:/Egyetem/4.%20félév/Programozási%20technológiák/ProgTech/GamifyYourLife/src/gamifyyourlife/Model/TasksContainerModel.java</file>
-            <file>file:/D:/Egyetem/4.%20félév/Programozási%20technológiák/ProgTech/GamifyYourLife/src/gamifyyourlife/Model/ProfileModel.java</file>
-            <file>file:/D:/Egyetem/4.%20félév/Programozási%20technológiák/ProgTech/GamifyYourLife/src/gamifyyourlife/GamifyYourLife.java</file>
-            <file>file:/D:/Egyetem/4.%20félév/Programozási%20technológiák/ProgTech/GamifyYourLife/src/gamifyyourlife/Model/TaskCreateModel.java</file>
+            <file>file:/C:/Users/Felhasználó/Documents/GitHub/ProgTech/GamifyYourLife/src/gamifyyourlife/View/ShowProfileView.java</file>
+            <file>file:/C:/Users/Felhasználó/Documents/GitHub/ProgTech/GamifyYourLife/src/gamifyyourlife/View/DoneTaskView.java</file>
+            <file>file:/C:/Users/Felhasználó/Documents/GitHub/ProgTech/GamifyYourLife/test/gamifyyourlife/Model/ProfileModelTest.java</file>
+            <file>file:/C:/Users/Felhasználó/Documents/GitHub/ProgTech/GamifyYourLife/test/gamifyyourlife/Model/TasksContainerModelTest.java</file>
+            <file>file:/C:/Users/Felhasználó/Documents/GitHub/ProgTech/GamifyYourLife/src/gamifyyourlife/Controller/DoneTaskController.java</file>
+            <file>file:/C:/Users/Felhasználó/Documents/GitHub/ProgTech/GamifyYourLife/src/gamifyyourlife/View/CommandsView.java</file>
+            <file>file:/C:/Users/Felhasználó/Documents/GitHub/ProgTech/GamifyYourLife/src/gamifyyourlife/Model/TasksContainerModel.java</file>
+            <file>file:/C:/Users/Felhasználó/Documents/GitHub/ProgTech/GamifyYourLife/src/gamifyyourlife/View/ShowHistoryView.java</file>
+            <file>file:/C:/Users/Felhasználó/Documents/GitHub/ProgTech/GamifyYourLife/src/gamifyyourlife/GamifyYourLife.java</file>
+            <file>file:/C:/Users/Felhasználó/Documents/GitHub/ProgTech/GamifyYourLife/src/gamifyyourlife/Controller/ManageControllers.java</file>
         </group>
     </open-files>
 </project-private>

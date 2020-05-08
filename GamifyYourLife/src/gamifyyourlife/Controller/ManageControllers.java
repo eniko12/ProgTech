@@ -21,35 +21,33 @@ public class ManageControllers {
     }
     
     public void nextCommand(){
-        this.commandsV.next();
-        switch(this.commandsV.getNextCommand()){
-            case "p":
-                this.pC.show();
-                this.nextCommand();
-                break;
-            case "h":
-                this.historyC.show();
-                this.nextCommand();
-                break;
-            case "n":
-                this.createC.create();
-                this.nextCommand();
-                break;
-            case "d":
-                this.doneC.done();
-                this.nextCommand();
-                break;
-            case "del":
-                this.deleteC.delete();
-                this.nextCommand();
-                break;
-            case "ex":
-                this.commandsV.bye();
-                break;
-            default:
-                this.commandsV.error();
-                this.nextCommand();
-                break;
-        }      
+        boolean run = true;
+        while(run){
+             this.commandsV.next();
+            switch(this.commandsV.getNextCommand()){
+                case "p":
+                    this.pC.show();
+                    break;
+                case "h":
+                    this.historyC.show();
+                    break;
+                case "n":
+                    this.createC.create();
+                    break;
+                case "d":
+                    this.doneC.done();
+                    break;
+                case "del":
+                    this.deleteC.delete();
+                    break;
+                case "ex":
+                    this.commandsV.bye();
+                    run = false;
+                    break;
+                default:
+                    this.commandsV.error();
+                    break;
+            }      
+        }
     }
 }
