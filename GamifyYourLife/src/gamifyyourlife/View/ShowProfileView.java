@@ -22,7 +22,8 @@ public class ShowProfileView {
         System.out.println("----------------------------------------");
         System.out.println("Szia " + this.name + "!");
         System.out.println();
-        System.out.println("Hobbi szint: "+ this.jobLevel);
+        System.out.println("Munka szint: " + this.jobLevel);
+        System.out.println("Hobbi szint: "+ this.hobbyLevel);
         System.out.println("Egyéb szint: "+ this.otherLevel);
         System.out.println("Arany egyenleg: "+ this.gold);
         System.out.println();

@@ -76,7 +76,7 @@ public class ProfileModelTest {
     public void testSetGold3() {
         TasksContainerModel everyTask = new TasksContainerModel();
         ProfileModel p = new ProfileModel("Regina", everyTask);  
-        TaskCreateModel create = new TaskCreateModel(everyTask.history); 
+        HandleTaskModel create = new HandleTaskModel(HistoryModel.getInstance());
         TaskJobModel jobT = new TaskJobModel("Email-ek kiküldése", -100, 10);
         create.TaskType(jobT);
         create.taskDone(p, everyTask);  

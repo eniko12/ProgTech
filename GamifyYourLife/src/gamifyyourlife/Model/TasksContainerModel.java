@@ -5,13 +5,12 @@ import java.util.ArrayList;
 public class TasksContainerModel implements ISubject {
     private ArrayList<TaskModel> allTask;
     private ArrayList<IObserver> observers; 
-    public HistoryModel history = HistoryModel.getInstance();
     
     
     public TasksContainerModel(){
         
-        this.observers = new ArrayList<IObserver>();
-        this.allTask = new ArrayList<TaskModel>();
+        this.observers = new ArrayList<>();
+        this.allTask = new ArrayList<>();
     }
     
     public ArrayList<TaskModel> getAll(){
@@ -23,11 +22,17 @@ public class TasksContainerModel implements ISubject {
         return all;
     }
     
+    public ArrayList<String> listTaskName(){
+        ArrayList<String> list = new ArrayList<>();
+        for(int i = 0; i<this.getAll().size(); i++){
+            list.add(this.getAll().get(i).taskName);
+        }
+        return list;
+    }
     
     public void addTask(TaskModel task){
         allTask.add(task);
         taskListChanged();
-        history.addToHistory("Új feladat hozzáadva: " + "'" + task.taskName + "'");
     }
     
     public void removeTask(TaskModel task){

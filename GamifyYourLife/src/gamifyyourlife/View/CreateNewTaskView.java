@@ -29,24 +29,33 @@ public class CreateNewTaskView {
         System.out.println("Adja meg a feladat típusát!");
         System.out.print("Munka - j, Hobbi - h, egyéb - o: ");
         this.newTaskType = in.nextLine();
-        System.out.print("Arany jutalom: ");
-        this.newTaskGold = in.nextInt();
-        System.out.print("Pont jutalom: ");
-        this.newTaskPoint = in.nextInt();       
-        System.out.println();
-        System.out.println("----------------------------------------");   
+        if(this.newTaskType.toLowerCase().equals("j") || this.newTaskType.toLowerCase().equals("h") || this.newTaskType.toLowerCase().equals("o") ){
+            System.out.print("Arany jutalom: ");
+            this.newTaskGold = Integer.parseInt(in.nextLine());
+            System.out.print("Pont jutalom: ");
+            this.newTaskPoint = Integer.parseInt(in.nextLine());
+            System.out.println();
+            System.out.println("----------------------------------------"); 
+        }
+        else{
+          this.error();
+        }
     }
     
     public void added(){
         System.out.println("Új feladat hozzáaadva.");
     } 
     
+    public void error(){
+        System.out.println("Nincs ilyen típus.");
+    }
+    
     public String getNewTaskName(){
         return this.newTaskName;
     }
     
     public String getNewTaskType(){
-        return this.newTaskType;
+        return this.newTaskType.toLowerCase();
     }
     
     public int getNewTaskGold(){

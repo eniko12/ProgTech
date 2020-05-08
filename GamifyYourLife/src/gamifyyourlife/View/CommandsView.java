@@ -11,8 +11,7 @@ public class CommandsView {
     public CommandsView(){
         
     }
-    
-   public void next(){
+       public void next(){
         System.out.println("Parancsok: ");
         System.out.println("Profil megtekintése: p ");
         System.out.println("Előzmények megtekintése: h ");
@@ -23,4 +22,16 @@ public class CommandsView {
         System.out.print("A választott parancs: ");
         nextC = in.nextLine();
     }  
+       
+    public String getNextCommand(){
+        return this.nextC.toLowerCase();
+    }
+    
+    public void bye(){
+        System.out.println("Kilépés. Viszlát!");
+    }
+    
+    public void error(){
+        System.out.println("Nincs ilyen parancs. Próbáljon az alábbiakból:");
+    }
 }

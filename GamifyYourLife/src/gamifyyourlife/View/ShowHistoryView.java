@@ -18,5 +18,9 @@ public class ShowHistoryView {
         System.out.println("----------------------------------------");
     }
     
+    public void setHistory(ArrayList<String> list){
+        historyList = list;
+    }
+    
     
 }

@@ -83,15 +83,7 @@ public class TasksContainerModelTest {
         assertFalse(c.getAll().isEmpty());
     }
 
-      @Test
-    public void testAddTask3() { //History check
-        TasksContainerModel c = new TasksContainerModel();  
-        TaskHobbyModel hobbyT = new TaskHobbyModel("Festeni egy képet", 15, 15);
-        c.addTask(hobbyT);
-        assertTrue(c.history.listLength()==1);
         
-    }
-    
     @Test
     public void testRemoveTask() {
        TasksContainerModel c = new TasksContainerModel();

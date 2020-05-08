@@ -32,4 +32,8 @@ public class HistoryModel {
     public String getListElement(int i){
         return list.get(i);
     }
+    
+    public ArrayList<String> getList(){
+        return this.list;
+    }
 }

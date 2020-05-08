@@ -21,16 +21,46 @@ public class DoneTaskView {
             System.out.println(i+1 + ". " + this.taskList.get(i));
         }  
         System.out.println("Adja meg a kész feladat sorszámát: ");
-        this.delIndex = in.nextInt();
-        System.out.println("Erre gondoltál? " + this.taskList.get(delIndex));
+        this.delIndex = Integer.parseInt(in.nextLine()) -1; 
+        try{
+        System.out.println("Erre gondoltál? ");
+        System.out.println(this.taskList.get(delIndex));
         System.out.println("Igen - y, Nem -n: ");
         this.confirm=in.nextLine();
-        System.out.println("Kész");       
-        System.out.println("----------------------------------------");  
+        if(this.confirm.toLowerCase().equals("y") || this.confirm.toLowerCase().equals("n")){
+            if(this.confirm.toLowerCase().equals("y")){
+                System.out.println("----------------------------------------");  
+            }
+            else{
+                System.out.println("Folyamat megszakítva.");
+            }
+        }
+        else{
+            this.error();
+        }
+        }catch(IndexOutOfBoundsException e){
+        System.out.println("A(z) '"+ e + "' nem érvényes sorszám! Folyamat megszakítva!");
+        }      
     }
      
     public void setTaskList(ArrayList<String> list){
         this.taskList = list;
+    }
+    
+    public int getDelIndex(){
+        return delIndex;
+    }
+    
+    public String getConfirm(){
+        return this.confirm;
+   }
+    
+    public void TaskIsDone(){
+         System.out.println("A feladat elvégezve.");  
+    }
+    
+    public void error(){
+        System.out.println("Sikertelen feladat elvégzés. Vagy 'y' vagy 'n' karaktert írjon!");
     }
     
 }
