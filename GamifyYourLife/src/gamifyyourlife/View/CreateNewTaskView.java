@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package gamifyyourlife.View;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Felhasználó
- */
 public class CreateNewTaskView {
     Scanner in = new Scanner(System.in); 
     private String newTaskName;
@@ -65,5 +56,4 @@ public class CreateNewTaskView {
     public int getNewTaskPoint(){
         return this.newTaskPoint;
     }
-    
 }

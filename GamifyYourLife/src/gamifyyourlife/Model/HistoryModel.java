@@ -18,7 +18,7 @@ public class HistoryModel {
         return uniqueInstance;
     }
    
-        public void addToHistory(String event){
+    public void addToHistory(String event){
         SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
         Date d = new Date(System.currentTimeMillis());
         String date = formatter.format(d);

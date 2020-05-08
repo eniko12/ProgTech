@@ -16,5 +16,4 @@ public class HistoryController {
         this.historyV.setHistory(this.historyM.getList());
         this.historyV.show();
     }
-    
 }

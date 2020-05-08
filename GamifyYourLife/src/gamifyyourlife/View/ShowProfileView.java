@@ -1,9 +1,7 @@
-
 package gamifyyourlife.View;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 
 public class ShowProfileView {
     Scanner in = new Scanner(System.in); 
@@ -15,7 +13,6 @@ public class ShowProfileView {
     private ArrayList<String> taskList = new ArrayList<>();
     
     public ShowProfileView(){
-        
     }
     
     public void show(){
@@ -69,5 +66,4 @@ public class ShowProfileView {
     public void setTaskList(ArrayList<String> list){
         this.taskList = list;
     }
-    
 }

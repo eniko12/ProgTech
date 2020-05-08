@@ -1,8 +1,6 @@
-
 package gamifyyourlife.View;
 
 import java.util.Scanner;
-
 
 public class CommandsView {
     Scanner in = new Scanner(System.in); 

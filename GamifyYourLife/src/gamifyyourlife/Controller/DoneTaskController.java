@@ -27,12 +27,11 @@ public class DoneTaskController {
                 for(int i =0; i<this.container.getAll().size(); i++){
                     if(i  == this.doneV.getDelIndex()){
                         task = this.container.getAll().get(i);
-                         this.handleTaskM.TaskType(task);
+                        this.handleTaskM.TaskType(task);
                         this.handleTaskM.taskDone(p,container);
                         this.doneV.TaskIsDone();
                     }
                 }                
             }
     }
-    
 }

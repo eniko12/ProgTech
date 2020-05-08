@@ -18,19 +18,18 @@ public class DeleteTaskController {
     
     public void delete(){
         
-            this.deleteV.setTaskList(this.container.listTaskName());
-            this.deleteV.delete();
-            if(this.deleteV.getDelIndex()<this.container.getAll().size() && this.deleteV.getConfirm().toLowerCase().equals("y")){
-                TaskModel task;
-                for(int i =0; i<this.container.getAll().size(); i++){
-                    if(i  == this.deleteV.getDelIndex()){
-                        task = this.container.getAll().get(i);
-                         this.handleTaskM.TaskType(task);
-                        this.handleTaskM.deleteFromList(container);
-                        this.deleteV.deleted();
-                    }
-                }                
-        }     
+     this.deleteV.setTaskList(this.container.listTaskName());
+     this.deleteV.delete();
+     if(this.deleteV.getDelIndex()<this.container.getAll().size() && this.deleteV.getConfirm().toLowerCase().equals("y")){
+        TaskModel task;
+        for(int i =0; i<this.container.getAll().size(); i++){
+          if(i  == this.deleteV.getDelIndex()){
+              task = this.container.getAll().get(i);
+              this.handleTaskM.TaskType(task);
+              this.handleTaskM.deleteFromList(container);
+              this.deleteV.deleted();
+           }
+        }                
+     }     
    }
-    
 }

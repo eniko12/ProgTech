@@ -1,9 +1,7 @@
-
 package gamifyyourlife.View;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 
 public class DoneTaskView {
     Scanner in = new Scanner(System.in); 
@@ -11,10 +9,10 @@ public class DoneTaskView {
     private String confirm;
     private ArrayList<String> taskList = new ArrayList<>();
     
-    public DoneTaskView(){
-        
+    public DoneTaskView(){        
     }
-     public void done(){
+    
+    public void done(){
         System.out.println("----------------------------------------");
         System.out.println("A feladatok listája: ");
         for(int i = 0; i<this.taskList.size(); i++){
@@ -62,5 +60,4 @@ public class DoneTaskView {
     public void error(){
         System.out.println("Sikertelen feladat elvégzés. Vagy 'y' vagy 'n' karaktert írjon!");
     }
-    
 }

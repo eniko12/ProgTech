@@ -50,8 +50,6 @@ public class ManageControllers {
                 this.commandsV.error();
                 this.nextCommand();
                 break;
-        }
-                
+        }      
     }
-    
 }

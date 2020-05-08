@@ -1,5 +1,4 @@
 package gamifyyourlife.Controller;
-import gamifyyourlife.Model.HistoryModel;
 import gamifyyourlife.Model.HandleTaskModel;
 import gamifyyourlife.Model.TaskHobbyModel;
 import gamifyyourlife.Model.TaskJobModel;
@@ -40,6 +39,5 @@ public class CreateNewTaskController {
             default:
                 break;
         } 
-        
     }
  }

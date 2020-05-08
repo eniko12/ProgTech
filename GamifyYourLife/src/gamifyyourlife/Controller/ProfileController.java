@@ -20,8 +20,6 @@ public class ProfileController {
         this.profileV.setJobLevel(this.profileM.getJobLevel());
         this.profileV.setOtherLevel(this.profileM.getOtherLevel());
         this.profileV.setTaskList(this.profileM.listEveryTask());
-        this.profileV.show();    
-        
+        this.profileV.show(); 
     }
-    
 }

@@ -61,5 +61,4 @@ public class DeleteTaskView {
     public String getConfirm(){
         return this.confirm;
    }
-    
 }

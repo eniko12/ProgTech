@@ -6,8 +6,7 @@ public class ShowHistoryView {
      private ArrayList<String> historyList = new ArrayList<>();
      
     public ShowHistoryView(){
-        
-    }
+      }
      
     public void show(){
         System.out.println("----------------------------------------");
@@ -21,6 +20,4 @@ public class ShowHistoryView {
     public void setHistory(ArrayList<String> list){
         historyList = list;
     }
-    
-    
 }
