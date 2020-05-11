@@ -1,6 +1,7 @@
 
 package gamifyyourlife.Model;
 
+import java.util.Random;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -33,7 +34,7 @@ public class ProfileModelTest {
      * Test of setName method, of class ProfileModel.
      */
     @Test
-    public void testSetName() {
+    public void testSetName() { //nagybetű, kisbetű
         TasksContainerModel everyTask = new TasksContainerModel();
         ProfileModel p = new ProfileModel("REgINa", everyTask);        
         String expResult = "Regina";
@@ -55,7 +56,7 @@ public class ProfileModelTest {
 
     
     @Test
-    public void testSetGold() {
+    public void testSetGold() { //gold nem kisebb mint 0!
         TasksContainerModel everyTask = new TasksContainerModel();
         ProfileModel p = new ProfileModel("Regina", everyTask);   
         p.setGold(-10);
@@ -73,7 +74,7 @@ public class ProfileModelTest {
         assertEquals(expResult, gold);   
     }
     
-    public void testSetGold3() {
+    public void testSetGold3() { //gold nem kisebb mint 0, akkor se ha feladat volt!
         TasksContainerModel everyTask = new TasksContainerModel();
         ProfileModel p = new ProfileModel("Regina", everyTask);  
         HandleTaskModel create = new HandleTaskModel(HistoryModel.getInstance());
@@ -84,6 +85,7 @@ public class ProfileModelTest {
         int gold = p.getGold();
         assertEquals(expResult, gold);   
     }
+  
 
     
     @Test
@@ -158,5 +160,7 @@ public class ProfileModelTest {
         int points = p.getOtherLevel();
         assertEquals(expResult, points);
     }
+    
+    
 
 }

@@ -29,7 +29,5 @@ public class HandleTaskModel {
         c.removeTask(task);
     }   
     
-    public String getTasktest(){
-        return task.taskName;
-    }
+   
 }

@@ -6,16 +6,17 @@ import java.util.Date;
 
 public class HistoryModel {
     private static HistoryModel uniqueInstance=null;
-    private ArrayList<String> list = new ArrayList();;
+    private ArrayList<String> list;
     
     private HistoryModel() {}
     
     public static HistoryModel getInstance(){
         if(uniqueInstance == null){
             uniqueInstance = new HistoryModel();
-        }
-        uniqueInstance.list = new ArrayList();
+         }
+        uniqueInstance.list = new ArrayList<>();
         return uniqueInstance;
+        
     }
    
     public void addToHistory(String event){
