@@ -18,8 +18,7 @@ Egy kezdetleges Gamify Your Life alkalmazást szeretnék készíteni, lényegéb
 
 - meg lehetne tekinteni a karakter profilját
 -  listázni a feladatokat
--  listázni az elvégzett feladatokat
--  a feladatokat lehetne törölni, módosítani és pipálni 
+-  a feladatokat lehetne törölni, hozzáadni, és elvégzettnek jelölni
 -  lehetőség lenne az előzmények megtekintésére 
   
 ## Tervezési minták
@@ -28,4 +27,3 @@ Egy kezdetleges Gamify Your Life alkalmazást szeretnék készíteni, lényegéb
 - a 3 feladat típust **stratégiaként** írnám fel
 - Hogy mindig a legfrisebb feladatok jelenjenek meg a profilon **Observer**-t használnék
 
-> Written with [StackEdit](https://stackedit.io/).
