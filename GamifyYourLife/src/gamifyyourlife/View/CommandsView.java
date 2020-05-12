@@ -2,6 +2,7 @@ package gamifyyourlife.View;
 
 import java.util.Scanner;
 
+
 public class CommandsView {
     Scanner in = new Scanner(System.in); 
      public String nextC;
@@ -10,6 +11,7 @@ public class CommandsView {
         
     }
        public void next(){
+        System.out.println();
         System.out.println("Parancsok: ");
         System.out.println("Profil megtekintése: p ");
         System.out.println("Előzmények megtekintése: h ");
